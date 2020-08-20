@@ -1,0 +1,2 @@
+docker pull openjdk:11
+docker run --rm -it -v $(pwd):/code/laguna -v ~/.gradle:/root/.gradle openjdk:11 /bin/bash
