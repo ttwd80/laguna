@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  java:
+    image: openjdk:11
+    command: sleep infinity
+    volumes:
+      - .:/code/laguna
+      - ~/.gradle:/root/.gradle
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db/laguna
+      - SPRING_DATASOURCE_USERNAME=laguna
+      - SPRING_DATASOURCE_PASSWORD=sT2EcWTaqNxw
+
+
+  db:
+    image: postgres:12
+    restart: always
+    environment:
+      - POSTGRES_USER=laguna
+      - POSTGRES_PASSWORD=sT2EcWTaqNxw
+
