@@ -34,9 +34,8 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	implementation("org.liquibase:liquibase-core")
+	implementation("org.flywaydb:flyway-core")
 	compileOnly("org.projectlombok:lombok")
-	runtimeOnly("io.micrometer:micrometer-registry-graphite")
 	runtimeOnly("org.postgresql:postgresql")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
